@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="118dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="@string/descripcion_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -19,58 +19,90 @@
         app:srcCompat="@drawable/logo_app" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Username" />
+            android:text="@string/labelUsername" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/Name"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
-            android:text="@string/password" />
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="@string/labelPassword" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/pass"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/botonLogIn"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
-            android:backgroundTint="@color/green"
-            android:text="@string/LogIn"
-            tools:ignore="TextContrastCheck" />
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="@string/labelEmpresa" />
+
+        <EditText
+            android:id="@+id/company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/botonLogIn"
+        android:layout_width="@dimen/standardButtonWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/botonLogIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonRegister"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/botonRegister"
+        android:layout_width="@dimen/standardButtonWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/botonRegister"
+        app:layout_constraintEnd_toStartOf="@+id/botonLogIn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
