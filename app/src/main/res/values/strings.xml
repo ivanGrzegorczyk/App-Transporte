@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App Transporte</string>
+    <string name="descripcion_logo">Icono de la App</string>
+    <string name="LogIn">LOG IN</string>
+    <string name="Username">Username:</string>
+    <string name="Name">Name</string>
+    <string name="password">Password:</string>
+    <string name="pass">Pass</string>
+</resources>
