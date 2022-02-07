@@ -13,6 +13,6 @@
     <string name="notImplemented">Not yet implemented</string>
     <string name="test">test</string>
     <string name="loginFail">Login failed</string>
-    <string name="loginOk">Login ok</string>
+    <string name="loginOk">loginOk</string>
     <string name="accept">Aceptar</string>
 </resources>
