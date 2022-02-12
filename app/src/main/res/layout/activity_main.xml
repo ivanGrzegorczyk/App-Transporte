@@ -8,12 +8,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="118dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="133dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="44dp"
         android:contentDescription="@string/descripcion_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_app" />
@@ -23,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,9 +74,9 @@
             android:id="@+id/company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName"
-            android:autofillHints=""
             tools:ignore="LabelFor" />
 
     </LinearLayout>
@@ -86,7 +85,7 @@
         android:id="@+id/botonLogIn"
         android:layout_width="@dimen/standardButtonWidth"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="@color/green"
         android:text="@string/botonLogIn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +98,7 @@
         android:id="@+id/botonRegister"
         android:layout_width="@dimen/standardButtonWidth"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:text="@string/botonRegister"
         app:layout_constraintEnd_toStartOf="@+id/botonLogIn"
         app:layout_constraintHorizontal_bias="0.5"

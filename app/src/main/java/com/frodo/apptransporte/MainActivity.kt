@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
         val botonSignIn = findViewById<Button>(R.id.botonLogIn)
@@ -30,9 +31,9 @@ class MainActivity : AppCompatActivity() {
         val preferences = getSharedPreferences(KEY_LOGIN, Context.MODE_PRIVATE)
         val alreadyLogged = preferences.getBoolean(KEY_LOGGED, false)
 
-        if (alreadyLogged) {
-            goToHome()
-        }
+//        if (alreadyLogged) {
+//            goToHome()
+//        }
 
         botonSignIn.setOnClickListener {
             val user: String = editUser.text.toString()
