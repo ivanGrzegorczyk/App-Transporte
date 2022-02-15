@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="companies">
+        <item>Amazon</item>
+        <item>Tesla</item>
+        <item>Google</item>
+        <item>Meta</item>
+    </string-array>
 </resources>

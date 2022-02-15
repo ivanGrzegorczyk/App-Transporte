@@ -71,14 +71,11 @@
             android:layout_marginTop="@dimen/marginTop"
             android:text="@string/labelEmpresa" />
 
-        <EditText
-            android:id="@+id/company"
+        <Spinner
+            android:id="@+id/companiesList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:ignore="LabelFor" />
+            android:entries="@array/companies" />
 
     </LinearLayout>
 

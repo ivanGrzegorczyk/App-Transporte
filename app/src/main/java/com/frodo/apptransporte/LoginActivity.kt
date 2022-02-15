@@ -5,13 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
+
+    val companies = listOf("HP", "IBM", "Google", "Apple")
 
     companion object {
         const val TAG = "MainActivity"
@@ -22,18 +22,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         val signInButton = findViewById<Button>(R.id.botonLogIn)
         val signUpButton = findViewById<Button>(R.id.botonRegister)
         val editUser = findViewById<EditText>(R.id.editTextTextPersonName)
         val editPassword = findViewById<EditText>(R.id.password)
+        val companiesList = findViewById<Spinner>(R.id.companiesList)
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, companies)
+        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
+        companiesList.adapter = adapter
+
         val preferences = getSharedPreferences(KEY_LOGIN, Context.MODE_PRIVATE)
         val alreadyLogged = preferences.getBoolean(KEY_LOGGED, false)
 
-//        if (alreadyLogged) {
-//            goToHome()
-//        }
+        if (alreadyLogged) {
+            goToHome()
+        }
 
         signInButton.setOnClickListener {
             val user: String = editUser.text.toString()
