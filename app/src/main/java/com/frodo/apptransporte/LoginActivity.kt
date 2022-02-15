@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
-        val botonSignIn = findViewById<Button>(R.id.botonLogIn)
-        val botonSignUp = findViewById<Button>(R.id.botonRegister)
+        val signInButton = findViewById<Button>(R.id.botonLogIn)
+        val signUpButton = findViewById<Button>(R.id.botonRegister)
         val editUser = findViewById<EditText>(R.id.editTextTextPersonName)
         val editPassword = findViewById<EditText>(R.id.password)
         val preferences = getSharedPreferences(KEY_LOGIN, Context.MODE_PRIVATE)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 //            goToHome()
 //        }
 
-        botonSignIn.setOnClickListener {
+        signInButton.setOnClickListener {
             val user: String = editUser.text.toString()
             val password: String = editPassword.text.toString()
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        botonSignUp.setOnClickListener {
+        signUpButton.setOnClickListener {
             Toast.makeText(this, getString(R.string.notImplemented), Toast.LENGTH_SHORT).show()
         }
     }
