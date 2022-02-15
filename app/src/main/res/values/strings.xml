@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">App Transporte</string>
     <string name="descripcion_logo">Icono de la App</string>
-    <string name="botonLogIn">sign in</string>
-    <string name="botonRegister">sign up</string>
+    <string name="botonLogIn" translatable="false">sign in</string>
+    <string name="botonRegister" translatable="false">sign up</string>
     <string name="labelUsername">Usuario:</string>
     <string name="labelPassword">Contraseña:</string>
     <string name="labelEmpresa">Empresa:</string>
-    <string name="strUsername">admin</string>
-    <string name="strPassword">12345</string>
+    <string name="strUsername" translatable="false">admin</string>
+    <string name="strPassword" translatable="false">12345</string>
     <string name="loginFailed">El usuario o contraseña son incorrectos</string>
     <string name="loginCorrect">Ingresando…</string>
-    <string name="notImplemented">Not yet implemented</string>
-    <string name="test">test</string>
-    <string name="loginFail">Login failed</string>
+    <string name="notImplemented" translatable="false">Not yet implemented</string>
+    <string name="test" translatable="false">test</string>
+    <string name="loginFail" translatable="false">Login failed</string>
     <string name="loginOk">loginOk</string>
     <string name="accept">Aceptar</string>
-    <string name="homeScreenTitle">Home screen</string>
-    <string name="botonSignOut">Sign out</string>
+    <string name="homeScreenTitle" translatable="false">Home screen</string>
+    <string name="botonSignOut" translatable="false">Sign out</string>
 </resources>
