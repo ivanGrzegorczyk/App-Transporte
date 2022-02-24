@@ -16,5 +16,5 @@
     <string name="loginOk">loginOk</string>
     <string name="accept">Aceptar</string>
     <string name="homeScreenTitle" translatable="false">Home screen</string>
-    <string name="botonSignOut" translatable="false">Sign out</string>
+    <string name="botonSignOut">Sign out</string>
 </resources>

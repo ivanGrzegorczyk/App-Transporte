@@ -11,7 +11,7 @@ import androidx.core.content.edit
 
 class LoginActivity : AppCompatActivity() {
 
-    val companies = listOf("HP", "IBM", "Google", "Apple")
+    private val companies = listOf("HP", "IBM", "Google", "Apple")
 
     companion object {
         const val TAG = "MainActivity"
