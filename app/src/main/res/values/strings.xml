@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">App Transporte</string>
-    <string name="descripcion_logo">Icono de la App</string>
+    <string name="appName">App Transporte</string>
+    <string name="descripcionLogo">Icono de la App</string>
     <string name="botonLogIn" translatable="false">sign in</string>
     <string name="botonRegister" translatable="false">sign up</string>
     <string name="labelUsername">Usuario:</string>
@@ -13,8 +13,14 @@
     <string name="notImplemented" translatable="false">Not yet implemented</string>
     <string name="test" translatable="false">test</string>
     <string name="loginFail" translatable="false">Login failed</string>
-    <string name="loginOk">loginOk</string>
+    <string name="loginOk" translatable="false">loginOk</string>
     <string name="accept">Aceptar</string>
     <string name="homeScreenTitle" translatable="false">Home screen</string>
-    <string name="botonSignOut">Sign out</string>
+    <string name="botonSignOut" translatable="false">Sign out</string>
+    <string name="weatherButton" translatable="false">Weather</string>
+    <string name="errorMessage">⚠️ Error</string>
+    <string name="loadingEmoji">⌛</string>
+    <string name="cityValue">city</string>
+    <string name="inputCityMessage">Input City</string>
+    <string name="checkMessage">Check</string>
 </resources>

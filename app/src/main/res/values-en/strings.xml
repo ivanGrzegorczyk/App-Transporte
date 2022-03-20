@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Transport App</string>
-    <string name="descripcion_logo">App icon</string>
+    <string name="appName">Transport App</string>
+    <string name="descripcionLogo">App icon</string>
     <string name="labelUsername">Username:</string>
     <string name="labelPassword">Password:</string>
     <string name="labelEmpresa">Companie:</string>

@@ -7,13 +7,20 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Button
 import androidx.core.content.edit
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.title = ""
+        supportActionBar?.title = "Home"
         setContentView(R.layout.activity_home)
+
+        val weatherButton = findViewById<Button>(R.id.buttonWeather)
+        weatherButton.setOnClickListener {
+            val intent = Intent(this, WeatherActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
