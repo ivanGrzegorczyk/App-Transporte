@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appName">Transport App</string>
+    <string name="descripcionLogo">App icon</string>
+    <string name="labelUsername">Username:</string>
+    <string name="labelPassword">Password:</string>
+    <string name="labelEmpresa">Companie:</string>
+    <string name="loginFailed">Username or password are incorrect</string>
+    <string name="loginCorrect">Loging in</string>
+    <string name="accept">Ok</string>
+</resources>
