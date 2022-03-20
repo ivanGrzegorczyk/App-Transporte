@@ -55,7 +55,6 @@ class WeatherFragment : Fragment() {
 
         buttonCity.setOnClickListener {
             val city = editTextCity.text.toString()
-            city.replace(' ', '+')
             textTemperature?.text = getString(R.string.loadingEmoji)
 
             // COMIENZA UN SERVICIO
