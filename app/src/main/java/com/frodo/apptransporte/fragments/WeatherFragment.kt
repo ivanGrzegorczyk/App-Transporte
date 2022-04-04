@@ -1,4 +1,4 @@
-package com.frodo.apptransporte
+package com.frodo.apptransporte.fragments
 
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
@@ -13,6 +13,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.frodo.apptransporte.R
+import com.frodo.apptransporte.services.WeatherService
 
 class WeatherFragment : Fragment() {
     var textTemperature: TextView? = null

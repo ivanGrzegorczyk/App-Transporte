@@ -12,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTransporte">
+        <activity
+            android:name=".activities.NotesActivity"
+            android:label="@string/titleNotes"
+            android:exported="false" />
+
         <receiver
             android:name=".AutoexecReceiver"
             android:enabled="true"
@@ -22,18 +27,18 @@
         </receiver>
 
         <service
-            android:name=".WeatherService"
+            android:name=".services.WeatherService"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".WeatherActivity"
+            android:name=".activities.WeatherActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

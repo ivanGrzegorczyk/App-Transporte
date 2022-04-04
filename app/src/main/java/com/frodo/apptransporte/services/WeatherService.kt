@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.frodo.apptransporte
+package com.frodo.apptransporte.services
 
 import android.app.IntentService
 import android.content.Intent

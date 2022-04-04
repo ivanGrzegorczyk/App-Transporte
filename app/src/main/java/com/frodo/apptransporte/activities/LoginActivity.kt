@@ -1,4 +1,4 @@
-package com.frodo.apptransporte
+package com.frodo.apptransporte.activities
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
+import com.frodo.apptransporte.API
+import com.frodo.apptransporte.R
 
 class LoginActivity : AppCompatActivity() {
 

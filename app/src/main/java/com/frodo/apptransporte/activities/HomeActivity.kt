@@ -1,4 +1,4 @@
-package com.frodo.apptransporte
+package com.frodo.apptransporte.activities
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Button
 import androidx.core.content.edit
+import com.frodo.apptransporte.R
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,12 @@ class HomeActivity : AppCompatActivity() {
         val weatherButton = findViewById<Button>(R.id.buttonWeather)
         weatherButton.setOnClickListener {
             val intent = Intent(this, WeatherActivity::class.java)
+            startActivity(intent)
+        }
+
+        val notesButton = findViewById<Button>(R.id.buttonNotes)
+        notesButton.setOnClickListener {
+            val intent = Intent(this, NotesActivity::class.java)
             startActivity(intent)
         }
     }

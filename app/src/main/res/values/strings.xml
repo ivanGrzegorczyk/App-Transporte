@@ -23,4 +23,8 @@
     <string name="cityValue">city</string>
     <string name="inputCityMessage">Input City</string>
     <string name="checkMessage">Check</string>
+    <string name="notes">Notes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_note">Add note</string>
+    <string name="titleNotes">Notes</string>
 </resources>
