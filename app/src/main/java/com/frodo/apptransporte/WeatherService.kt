@@ -13,8 +13,8 @@ import com.android.volley.toolbox.Volley
 class WeatherService : IntentService("Weather service") {
 
     // IntentService vs Service
-    // Se elimina solo después de hacer su tarea
     // Genera un nuevo thread por si solo
+    // Se elimina solo después de hacer su tarea
 
     companion object {
         const val TAG = "WeatherService"
@@ -23,18 +23,21 @@ class WeatherService : IntentService("Weather service") {
     }
 
     // Main thread
+    @Deprecated("Deprecated in Java")
     override fun onCreate() {
         Log.d(TAG, "onCreate")
         super.onCreate()
     }
 
     // Main thread
+    @Deprecated("Deprecated in Java")
     override fun onDestroy() {
         Log.d(TAG, "onDestroy")
         super.onDestroy()
     }
 
     // Worker thread
+    @Deprecated("Deprecated in Java")
     override fun onHandleIntent(intent: Intent?) {
         Log.d(TAG, "onHandleIntent")
         val queue = Volley.newRequestQueue(this)

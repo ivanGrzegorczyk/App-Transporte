@@ -15,8 +15,8 @@ import android.widget.EditText
 import android.widget.TextView
 
 class WeatherFragment : Fragment() {
-
     var textTemperature: TextView? = null
+
     private val receiver = object : BroadcastReceiver() {
         @SuppressLint("SetTextI18n")
         override fun onReceive(context: Context?, intent: Intent?) {
