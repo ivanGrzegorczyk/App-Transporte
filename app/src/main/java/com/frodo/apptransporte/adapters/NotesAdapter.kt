@@ -1,24 +1,43 @@
 package com.frodo.apptransporte.adapters
 
+import android.graphics.Color
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.frodo.apptransporte.R
+import com.frodo.apptransporte.model.Note
 import com.frodo.apptransporte.model.NotesManager
 
 class NotesAdapter: RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
     class NoteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
+        fun bind(note: Note) {
+            val textTitle = itemView.findViewById<TextView>(R.id.item_note_title)
+            textTitle.text = note.title
+        }
     }
 
+    // Enlaza los datos en un viewholder a partir de una posición
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        val textView: TextView = holder.itemView as TextView
-        textView.text = NotesManager.getManager().listAll()[position].title
+        val note = NotesManager.getManager().get(position)
+        note?.let {
+            holder.bind(note)
+        }
+
+        if(position % 2 == 0) {
+            holder.itemView.setBackgroundColor(Color.CYAN)
+        } else {
+            holder.itemView.setBackgroundColor(Color.WHITE)
+        }
     }
 
+    // La recyclerview me pide un viewholder vacío
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        return NoteViewHolder(TextView(parent.context))
+        val inflator = LayoutInflater.from(parent.context)
+        val itemNote = inflator.inflate(R.layout.item_note, parent, false)
+        return NoteViewHolder(itemNote)
     }
 
     override fun getItemCount(): Int {

@@ -15,7 +15,8 @@
         <activity
             android:name=".activities.NotesActivity"
             android:label="@string/titleNotes"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing"/>
 
         <receiver
             android:name=".AutoexecReceiver"

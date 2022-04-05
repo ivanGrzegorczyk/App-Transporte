@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.frodo.apptransporte.R
 import com.frodo.apptransporte.adapters.NotesAdapter
 import com.frodo.apptransporte.model.NotesManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class NotesListFragment : Fragment() {
     override fun onCreateView(
@@ -22,7 +23,7 @@ class NotesListFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_notes_list, container, false)
 
-        rootView.findViewById<Button>(R.id.buttonAddNotes).setOnClickListener(
+        rootView.findViewById<FloatingActionButton>(R.id.buttonAddNotes).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_notesListFragment_to_notesAddFragment)
         )
 

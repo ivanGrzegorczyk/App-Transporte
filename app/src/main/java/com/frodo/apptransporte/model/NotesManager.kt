@@ -2,16 +2,13 @@ package com.frodo.apptransporte.model
 
 class NotesManager {
     companion object {
-        private val _instance = NotesManager()
+        private val instance = NotesManager()
         fun getManager(): NotesManager {
-            return _instance
+            return instance
         }
     }
 
-    private val notes = mutableListOf<Note>(
-        Note("Teléfono", "1122362187"),
-        Note("Dirección", "La Llama 7")
-    )
+    private val notes = mutableListOf<Note>()
 
     fun addNote(note: Note) {
         notes.add(note)
@@ -19,5 +16,13 @@ class NotesManager {
 
     fun listAll(): MutableList<Note> {
         return notes
+    }
+
+    fun get(i: Int): Note? {
+        return if(i >= 0) {
+            notes[i]
+        } else {
+            null
+        }
     }
 }
