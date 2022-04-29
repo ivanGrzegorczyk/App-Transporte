@@ -6,9 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.LinearLayout
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.frodo.apptransporte.R
@@ -28,14 +27,29 @@ class NotesListFragment : Fragment() {
         )
 
         // Configurar el RecyclerView
-        val recyclerNotes = rootView.findViewById<RecyclerView>(R.id.recycklerNotes)
+        val recyclerNotes = rootView.findViewById<RecyclerView>(R.id.recyclerNotes)
         recyclerNotes.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         val adapter = NotesAdapter()
         recyclerNotes.adapter = adapter
 
+        adapter.setOnRowSelected { position ->
+            val bundle = Bundle()
+            bundle.putInt("position", position)
+            findNavController().navigate(R.id.action_notesListFragment_to_notesDetailsFragment, bundle)
+        }
+
+        NotesManager.getManager().registerListener {
+            adapter.notifyDataSetChanged()
+        }
+
+        NotesManager.getManager().registerListener {
+            Log.d("note", "cambiaron los datos")
+        }
+
         NotesManager.getManager().listAll().forEach {
             Log.d("note", it.toString())
         }
+
         return rootView
     }
 }

@@ -26,7 +26,6 @@ class NotesAddFragment : Fragment() {
             if(noteTitle.isNotBlank() || noteBody.isNotBlank()) {
                 NotesManager.getManager().addNote(Note(noteTitle, noteBody))
             }
-
             findNavController().popBackStack()
         }
 

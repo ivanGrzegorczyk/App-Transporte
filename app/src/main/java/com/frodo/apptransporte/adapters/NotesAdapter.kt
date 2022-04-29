@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
 import com.frodo.apptransporte.R
 import com.frodo.apptransporte.model.Note
@@ -19,17 +20,24 @@ class NotesAdapter: RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
         }
     }
 
+    var rowSelectedListener: ((Int)->Unit)? = null
+    fun setOnRowSelected(listener: (Int) -> Unit) {
+        rowSelectedListener = listener
+    }
+
     // Enlaza los datos en un viewholder a partir de una posición
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = NotesManager.getManager().get(position)
         note?.let {
             holder.bind(note)
-        }
-
-        if(position % 2 == 0) {
-            holder.itemView.setBackgroundColor(Color.CYAN)
-        } else {
-            holder.itemView.setBackgroundColor(Color.WHITE)
+            holder.itemView.setOnClickListener {
+                rowSelectedListener?.let { it(position) }
+            }
+            if(position % 2 == 0) {
+                holder.itemView.setBackgroundColor(Color.CYAN)
+            } else {
+                holder.itemView.setBackgroundColor(Color.WHITE)
+            }
         }
     }
 
